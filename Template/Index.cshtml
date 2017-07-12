@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑",arial;
+            color: #000;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        /*.warp {width:794px; height: 1123px; border: 1px solid red; margin: auto;}*/
+        .main {
+            width: 800px;
+            margin: auto;
+        }
+
+            .main h1 {
+                text-align: center;
+                text-align: center;
+                font-weight: normal;
+                font-size: 28px;
+                padding: 10px 0;
+            }
+
+            .main h2 {
+                text-align: center;
+                text-align: center;
+                font-weight: normal;
+                font-size: 26px;
+                padding: 0px 0 20px 0;
+            }
+
+        .date {
+            margin-bottom: 16px;
+            overflow: hidden;
+            margin-left: 39px;
+        }
+
+        .date_left {
+            float: left;
+            width: 50%;
+        }
+
+        .date_right {
+            float: left;
+            width: 50%;
+        }
+
+        .date_left span {
+            display: inline-block;
+            float: left;
+        }
+
+        .date_left label {
+            display: inline-block;
+            float: left;
+            border-bottom: 1px solid #000000;
+            width: 70%;
+            text-indent: 15px;
+        }
+
+        .date_right span {
+            display: inline-block;
+            float: left;
+        }
+
+        .date_right label {
+            display: inline-block;
+            float: left;
+            border-bottom: 1px solid #000000;
+            width: 70%;
+            text-indent: 15px;
+        }
+
+        .date01 {
+            float: left;
+            width: 20%;
+        }
+
+            .date01 span {
+                display: inline-block;
+                float: left;
+            }
+
+            .date01 label {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                margin-left: 5px;
+                border-bottom: 1px solid #000000;
+            }
+
+        .date04 {
+            float: left;
+            width: 40%;
+        }
+
+            .date04 span {
+                display: inline-block;
+                float: left;
+            }
+
+            .date04 label {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                margin-left: 5px;
+                border-bottom: 1px solid #000000;
+            }
+
+        table {
+            width: 90%;
+            border: 1px solid #000;
+            text-align: center;
+            border-right: none;
+            border-bottom: 0;
+            margin: auto;
+        }
+
+            table tr {
+                padding: 10px 0;
+            }
+
+                table tr td {
+                    border-right: 1px solid #000;
+                    width: 100px;
+                    padding: 8px 10px;
+                    border-bottom: 1px solid #000;
+                }
+
+        .lastTr {
+            height: 95px;
+            position: relative;
+            padding: 0 18px;
+        }
+
+            .lastTr p {
+                text-align: left;
+                padding-bottom: 40px;
+            }
+        /*.last_div{text-align: right;}*/
+        .last_div {
+            margin-left: 63%;
+        }
+
+        .main_p {
+            line-height: 20px;
+            padding-top: 5px;
+            font-size: 12px;
+        }
+
+        .warning {
+            margin-left: 39px;
+        }
+
+        #year {
+            padding-left: 50px;
+        }
+
+        table {
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="main">
+            <h1>中华人民共和国预防性健康检查表</h1>
+            <h2>从业人员健康体检结果表</h2>
+            <!---->
+            <temp class='TempIndex00'>
+                <div class="date">
+                    <div class="date_left">
+                        <span>体检日期：<span data-source="1" data-property='SysNumber' data-type='single'>@Name</span> </span>
+
+                    </div>
+                    <div class="date_right">
+                        <span>编号：@SysNumber</span>
+
+                    </div>
+                </div>
+
+                <div class="date">
+                    <div class="date01">
+                        <span>姓名：@MName</span>
+
+                    </div>
+                    <div class="date01">
+                        <span>性别：@MSex</span>
+
+                    </div>
+                    <div class="date01">
+                        <span>年龄：@MAge</span>
+
+                    </div>
+                    <div class="date04">
+                        <span>工种：@WorkType</span>
+
+                    </div>
+                </div>
+            </temp>
+
+
+            <table class='TableIndex01 ssss' cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td rowspan="2">既往<br><br>病史</td>
+                    <td>病名</td>
+                    <td>肝炎</td>
+                    <td>痢疾</td>
+                    <td>伤寒</td>
+                    <td>肺结核</td>
+                    <td>皮肤病</td>
+                    <td>其他</td>
+                </tr>
+                <tr>
+
+                    <td>患病<br>时间</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">体<br><br>征</td>
+                    <td>心脏</td>
+                    <td colspan="2">@心@</td>
+                    <td>肝</td>
+                    <td colspan="3">@肝@</td>
+
+                </tr>
+                <tr>
+                    <td>肺</td>
+                    <td colspan="2">@肺@</td>
+                    <td>脾</td>
+                    <td colspan="3">@脾@</td>
+                </tr>
+                <tr>
+                    <td>皮肤</td>
+                    <td colspan="2">@皮肤@</td>
+                    <td rowspan="2">医生<br>签名</td>
+                    <td colspan="3" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td>其他</td>
+                    <td colspan="2">@其他@</td>
+
+                </tr>
+                <tr rowspan="2">
+                    <td rowspan="2">X线胸透或胸部拍片</td>
+                    <td rowspan="2" colspan="3">@X射线检查@</td>
+                    <td rowspan="2">医生<br>签名</td>
+                    <td rowspan="2" colspan="3"></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td colspan="3">实验室检查</td>
+                    <td colspan="2">检查结果</td>
+                    <td colspan="3">检验师签名</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">大便<br><br>培养</td>
+                    <td colspan="2">痢疾杆菌</td>
+                    <td colspan="2">@痢疾杆菌@</td>
+                    <td colspan="3" rowspan="2"></td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">伤寒或副伤寒杆菌</td>
+                    <td colspan="2">@伤寒或副伤寒杆菌@</td>
+
+                </tr>
+                <!--<tr>
+                    <td colspan="3">·1111</td>
+                    <td colspan="2">2</td>
+                    <td colspan="3">2</td>
+                </tr> -->
+
+                <tr>
+                    <td rowspan="2">血样<br><br>检测</td>
+                    <td colspan="2">甲肝IgM</td>
+                    <td colspan="2">@HAV-IgM@</td>
+                    <td colspan="3" rowspan="2"></td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">戊肝IgM</td>
+                    <td colspan="2">@HEV-IgM@</td>
+
+                </tr>
+
+
+                <tr class="lastTr">
+                    <td colspan="8">
+                        <p>检查结论: @PhysicalConclusion@ </p>
+                        <div class="last_div">
+                            <span>主检医师签名： </span><br>
+                            <span>@ConclusionDate@</span>
+                        </div>
+                    </td>
+                </tr>
+
+
+
+
+            </table>
+
+            <div class="warning">
+                <p class="main_p">1、此表用于公共场所、食品、药品生产经营、化妆品生产和供水从业人员的预防性健康体检。</p>
+                <p class="main_p">2、对体检结果如有异议，一周之内到疾控中心复查。</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

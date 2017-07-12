@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>hello</title>
+</head>
+
+<body>
+    第一种 列表
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    姓名
+                </th>
+                <th>
+                    年龄
+                </th>
+                <th>
+                    身高
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(ViewBag.List != null) {
+
+                foreach (var newItem in ViewBag.List) {
+                @:<tr>
+                    <td>@newItem.Namess</td>
+                    <td>@newItem.Age</td>
+                    <td>@newItem.Height</td>
+                @:</tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    第二种 键值对
+    @KeyValues("", "MemberInfos")
+
+    第三种 直接属性 (全局有效 使用Model.Property )
+    @MyUpper(ViewBag.Sysnumber)
+</body>
+</html>
